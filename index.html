@@ -1,11 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5th assingment</title>
+    <!-- tailwind and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Railway google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font family -->
+    <style>
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="font-raleway">
+    <nav class="container mx-auto  flex justify-between pt-10">
+        <h2 class="text-4xl  font-extrabold text-black ">P-Ticket</h2>
+        <div class="w-30 h-2 bg-green-300 border rounded-xl p-6">
+            <div class="flex gap-2   ">
+                <p class="text-xl  bg-[#1DD1001A] text-[#1DD100] text-center">Bus</p>
+                <img src="./image/bus-icon.png" alt="">
+            </div>
+        </div>
+
+    </nav>
+    <main class="font-raleway">
+        <section class="min-h-screen bg-[url(image/banner.png)] bg-no-repeat bg-center">
+            <div class="text-center pt-[15%]">
+                <h1 class="text-6xl font-extrabold ">End-to-End Travel with <br><span
+                        class="text-green-400 items-center text-[#1DD100]"> P Paribahan</span></h1>
+                <p class="text-white text-lg font-normal pt-4 pb-6">Some people prefer a hilly area for travelling while
+                    the others like travelling to places with beaches. <br> In this travelling essay, we will look at
+                    the importance.</p>
+                <button class="btn bg-[#1DD100] text-[#030712] font-bold text-xl">Buy Tickets</button>
+            </div>
+
+        </section>
+        <section class="font-raleway">
+            <section class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-[#030712]">Best offers for you</h2>
+                <section class="flex flex-row justify-between">
+                    <section
+                        class="w-[570px] h-[220px] bg-[#FFBF0F] text-left pt-10 pl-10 rounded-3xl flex justify-between mt-8">
+                        <div>
+                            <p> <span class="text-4xl font-black">15% off</span>
+                                <br>
+                                <span class="text-[#030712CC] text-xl font-semibold">on your next purchase</span>
+                                <br>
+                                <span class="text-[#03071280] font-medium text-lg">use by January 2024</span>
+                            </p>
+
+                        </div>
+                        <div class="pr-10 pt-[5%]">
+                            <p> <span class="font-semibold text-3xl">NEW15
+                                </span><br> <span class="font-medium text-xl">Coupon Code</span></p>
+
+                        </div>
+
+                    </section>
+                    <section
+                        class="w-[570px] h-[220px] bg-[#F78C9C] text-left pt-10 pl-10 rounded-3xl flex justify-between mt-8">
+                        <div>
+                            <p> <span class="text-4xl font-black">20% off</span>
+                                <br>
+                                <span class="text-[#030712CC] text-xl font-semibold">on your next purchase</span>
+                                <br>
+                                <span class="text-[#03071280] font-medium text-lg">use by January 2024</span>
+                            </p>
+
+                        </div>
+                        <div class="pr-10 pt-[5%]">
+                            <p> <span class="font-semibold text-3xl">couple
+                                </span><br> <span class="font-medium text-xl">Coupon Code</span></p>
+
+                        </div>
+
+                    </section>
+                </section>
+                <br>
+                <br>
+                <div class="text-center">
+                    <button class="btn bg-[#1DD1001A] text-[#1DD100] border-[#1DD100] ">Success</button>
+                </div>
+
+            </section>
+        </section>
+        <!-- Another section -->
+        <section class="bg-[#F7F8F8] rounded-xl">
+            
+        <section class="container mx-auto">
+            <div class="text-center pt-5">
+                <h1 class="text-[#030712] font-bold text-4xl">P.H paribahan</h1>
+                <p class="text-[#03071299] pt-4">Some people prefer a hilly area for travelling while the others like
+                    travelling to places with beaches. <br> In this travelling essay, we will look at the importance
+                </p>
+            </div>
+
+
+        </section>
+        <section class="container mx-auto">
+            <div class="flex justify-between bg-[#FFFFFF] rounded-xl">
+                <div>
+                    <div class="mt-10 flex justify-between">
+                        <div class="flex">
+                            <img src="./image/bus-logo.png" alt="">
+                            <p><span class="text-3xl font-bold">Greenline Paribahan</span> <br><span
+                                    class="text-lg">Coach-009-WEB ! AC_Business</span></p>
+        
+                        </div>
+                        <div class="w-[160px] h-[56px] mb-10 bg-[#1DD10026]  rounded-xl ">
+                            <div class="flex">
+                                <img src="./image/seat-green.png" alt="">
+                                <p class="text-xl   text-[#1DD100] items-center ">8 seat lefts</p>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <br>
+                    <br>
+                    <div class="bg-[#F7F8F8] rounded-xl">
+                        <br>
+                        <br>
+                        <div class="flex justify-between  ">
+                            <p class="text-[#03071296] text-lg ">Route</p>
+                            <p class="text-[#030712] text-lg font-semibold">Dhaka - Sylhet</p>
+                        </div>
+                        <br>
+                        <hr> 
+                        <br>
+                        <div class="flex justify-between">
+                            <p class="text-[#03071296] text-lg">Departure Time</p>
+                            <p class=" text-[#030712] text-lg font-semibold">09:00 Pm</p>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="pt-8 flex justify-between">
+                            <p class="text-base rounded-xl text-[#030712CC] bg-[#0307120D]  w-[232px] h-8 text-center ">Boarding
+                                Point - Laxmipur</p>
+                            <p class="text-base rounded-xl text-[#030712CC] bg-[#0307120D]  w-[232px] h-8 text-center ">Dropping
+                                Point - Bogura</p>
+                            <p class="text-base rounded-xl text-[#030712CC] bg-[#0307120D]  w-[232px] h-8 text-center ">Est.
+                                Time - 11 Hour</p>
+        
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    
+                </div>
+                 <div class="pr-40 pt-40">
+                    <div class="pl-7">
+                        <img src="./image/fare.png" alt="">
+                    </div>
+                    <p class="font-bold text-3xl">550 Taka</p>
+                    <p class="text-[#03071299] font-semibold pl-7">per Seat</p>
+                    
+                </div>
+            </div>
+
+        </section>
+        </section>
+        <section>
+
+        </section>
+    </main>
+
 </body>
+
 </html>
