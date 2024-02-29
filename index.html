@@ -41,10 +41,9 @@
                 </div>
             </div>
         </div>
-
     </nav>
     <main class="font-raleway">
-        <section class="container mx-auto ">
+        <section id="ticket-button-section" class="container mx-auto ">
             <div class="bg-[url(image/banner.png)] bg-no-repeat rounded-3xl ">
                 <div class="text-center ">
                     <div class="pt-20 ">
@@ -57,11 +56,13 @@
                             the importance.</p>
                     </div>
                     <div class="pb-40">
-                        <button class="btn bg-[#1DD100] text-[#030712] font-bold text-xl ">Buy Tickets</button>
+                        <!-- Click by ticket and go to select your seat -->
+                        <a href="#targetSection" id="scrollAnchor"><button onclick="ticket()" id="Buy-tickets"
+                                class="btn bg-[#1DD100] text-[#030712] font-bold text-xl ">Buy Tickets</button></a>
                     </div>
                 </div>
             </div>
-            <!-- bg-[url(image/banner.png)] bg-no-repeat -->
+
 
         </section>
         <br>
@@ -85,7 +86,7 @@
 
                         </div>
                         <div class="pr-10 pt-[5%]">
-                            <p> <span class="font-semibold text-3xl">NEW15
+                            <p> <span class="font-semibold text-3xl " id="coupon">NEW15
                                 </span><br> <span class="font-medium text-xl">Coupon Code</span></p>
 
                         </div>
@@ -145,7 +146,8 @@
                             <div class="w-[160px] h-[56px] mb-10 bg-[#1DD10026]  rounded-xl ">
                                 <div class="flex pl-2 ">
                                     <img src="./image/seat-green.png" alt="">
-                                    <p class="text-xl   text-[#1DD100] items-center pt-4 ">8 seat lefts</p>
+                                    <p id="biyok-count" class="text-xl   text-[#1DD100] items-center pt-4 seatRest1st ">
+                                        8 seat lefts</p>
                                 </div>
                             </div>
 
@@ -205,7 +207,7 @@
             <br>
 
             <!-- select your seat -->
-            <section class="container mx-auto bg-[#FFFFFF] rounded-3xl">
+            <section id="targetSection" class="container mx-auto bg-[#FFFFFF] rounded-3xl">
                 <div class="flex justify-between">
                     <!-- left div -->
                     <div class="w-[50%] ml-6">
@@ -237,23 +239,23 @@
                             <div class="flex justify-between mb-8 ml-6">
                                 <div class="flex mr-8">
                                     <p class="mr-12 pt-1">A</p>
-                                    <button class="btn btn-sm mr-16">A1</button>
-                                    <button class="btn btn-sm ">A2</button>
+                                    <button id="A1" class="btn btn-sm mr-16 seat-btn ">A1</button>
+                                    <button id="A2" class="btn btn-sm  seat-btn ">A2</button>
                                 </div>
                                 <div>
-                                    <button class="btn btn-sm mr-16">A3</button>
-                                    <button class="btn btn-sm mr-8">A4</button>
+                                    <button id="A3" class="btn btn-sm mr-16 seat-btn ">A3</button>
+                                    <button id="A4" class="btn btn-sm mr-8 seat-btn ">A4</button>
                                 </div>
                             </div>
                             <div class="flex justify-between ml-6">
                                 <div class="flex mr-8">
                                     <p class="mr-12 pt-1 ">B</p>
-                                    <button class="btn btn-sm mr-16">B1</button>
-                                    <button class="btn btn-sm ">B2</button>
+                                    <button id="B1" class="btn btn-sm mr-16 seat-btn ">B1</button>
+                                    <button id="B2" class="btn btn-sm seat-btn ">B2</button>
                                 </div>
                                 <div>
-                                    <button class="btn btn-sm mr-16">B3</button>
-                                    <button class="btn btn-sm mr-8">B4</button>
+                                    <button id="B3" class="btn btn-sm mr-16 seat-btn ">B3</button>
+                                    <button id="B4" class="btn btn-sm mr-8 seat-btn ">B4</button>
                                 </div>
                             </div>
                         </div>
@@ -277,43 +279,44 @@
                             <div class="flex justify-between rounded-3xl ml-8 mr-8">
                                 <div class="flex ">
                                     <p class="text-base font-semibold">Seat</p>
-                                    <p class="bg-[#1DD100] rounded-md">2</p>
+                                    <p id="card-count" class="bg-[#1DD100] rounded-md  ">0</p>
                                 </div>
                                 <p class="text-base font-semibold">Class</p>
                                 <p class="text-base font-semibold">Price</p>
                             </div>
                             <br>
                             <hr>
-                            <div class="flex justify-between ml-8 mr-8">
-                                <p class="text-[#03071299]">C2</p>
-                                <p class="text-[#03071299]">Economoy</p>
-                                <p class="text-[#03071299]">550</p>
+                            <div id="selecteconemy">
+
                             </div>
-                            <br>
-                            <div class="flex justify-between ml-8 mr-8">
-                                <p class="text-[#03071299]">C2</p>
-                                <p class="text-[#03071299]">Economoy</p>
-                                <p class="text-[#03071299]">550</p>
-                            </div>
-                            <br>
-                            <hr>
+
                             <div class="flex justify-between ml-8 mr-8 pt-2">
                                 <p class="text-base font-semibold">Total price</p>
-                                <p class="text-base font-semibold">BDT 1100</p>
+                                <p class="text-base font-semibold">BDT <span id="total-result">0</span></p>
+                                <p>discountPrice: <span id="discountammout">0</span></p>
                             </div>
                             <br>
                             <div class="w-[350px] h-[48px] bg-[#FFFFFF] rounded-xl ml-8 mr-8">
                                 <div class="flex justify-between">
                                     <br>
                                     <br>
-                                    <p class="pt-4 text-sm font-normal">Have any copupon?</p>
-                                    <button class="btn bg-[#1DD100] text-[#FFFFFF]">Apply</button>
+                                    <!-- <p class="pt-4 text-sm font-normal">Have any copupon?</p> -->
+                                    <input class="pt-4 text-sm font-normal" type="" placeholder="Have any coupon?">
+
+                                    <button onclick="anotherfuntion()" id="cupon-apply"
+                                        class="btn bg-[#1DD100] text-[#FFFFFF]">Apply</button>
                                 </div>
 
                             </div>
                             <div class="flex justify-between ml-8 mr-8 pt-4 pb-8">
-                                <p class="text-base font-semibold">Total price</p>
-                                <p class="text-base font-semibold">BDT 1100</p>
+                                <p class="text-base font-semibold">Grand Total</p>
+                                <p class="text-base font-semibold">BDT <span id="grandTotal">0</span></p>
+                            </div>
+
+                            <div class="ml-20 ">
+                                <a href="#my_modal_8" class="btn bg-[#27AE60] btn-wide text-white">Next</a>
+
+
                             </div>
                             <br>
                         </div>
@@ -324,49 +327,114 @@
         </section>
 
     </main>
-    <!-- Last secttion -->
-    <section class=" bg-[#F2F1F1] rounded-none">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="text-center">
-            <div class="flex justify-center">
-                <img src="./image/success.png" alt="">
+    <!-- The button to open modal -->
+    <!-- Put this part before </body> tag -->
+    <div class="modal" role="dialog" id="my_modal_8">
+        <div class="modal-box">
+            <section class=" bg-[#F2F1F1] rounded-none">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="text-center">
+                    <div class="flex justify-center">
+                        <img src="./image/success.png" alt="">
+                    </div>
+                    <br>
+                    <p class="text-[#27AE60] text-2xl">SUCCESS</p>
+                    <br>
+                    <p class="text-[#4A4A4A] font-medium">
+                        Thank you for Booking Our Bus Seats.
+                    </p>
+                    <p class="text-[#4A4A4A] font-medium">We are working hard to find the best service and deals for you. </p>
+                    <p class="text-[#4A4A4A] font-medium">Shortly you will find a confirmation in your email.</p>
+                    <br>
+                    <button class="btn bg-[#27AE60] btn-wide text-white">Continue</button>
+                    <br>
+        
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+        
+            </section>
+
+            <div class="modal-action">
+                <a href="#" class="btn">Yay!</a>
             </div>
-            <br>
-            <p class="text-[#27AE60] text-2xl">SUCCESS</p>
-            <br>
-            <p class="text-[#4A4A4A] font-medium">
-                Thank you for Booking Our Bus Seats. 
-            </p>
-            <p class="text-[#4A4A4A] font-medium">We are working hard to find the best service and deals for you. </p>
-            <p class="text-[#4A4A4A] font-medium">Shortly you will find a confirmation in your email.</p>
-            <br>
-            <button class="btn bg-[#27AE60] btn-wide text-white">Continue</button>
-            <br>
-
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    </div>
+    <!-- Last secttion -->
+   
+    <script>
 
-    </section>
+        // document.getElementById('mbileNo').addEventListener('keyup', function () {
+
+        //     if(!isNaN(event.key)){
+        //         document.getElementById('submit').classList.remove('hidden');
+        //     console.log(event.key);
+        //     }
+        // })
+        // document.getElementById('submit').addEventListener('click', function () {
+
+
+        //     const mobileno = parseInt(document.getElementById('mbileNo').value.length);
+        //     if (mobileno == 11) {
+        //         document.getElementById('wrapper').classList.add('hidden');
+        //         document.getElementById('model').classList.remove('hidden');
+        //     }else{
+        //         alert('11 digit mobile no Required!');
+        //     }
+        // })
+
+
+        function anotherfuntion() {
+
+            document.getElementById('cupon-apply').addEventListener('click', function () {
+                const Text = document.getElementById('coupon').innerText;
+
+                let totalSeatPrice1 = document.getElementById('total-result').innerText
+                let totalSeatPrice = parseInt(totalSeatPrice1)
+
+
+                if (Text === "NEW15") {
+                    let discountPrice = (15 * totalSeatPrice) / 100;
+                    let grandTotalprice = totalSeatPrice - discountPrice;
+                    let discount = document.getElementById('discountammout')
+                    discount.innerText = discountPrice
+                    document.getElementById("grandTotal").innerText = grandTotalprice;
+                    document.getElementById("without-coupon").innerHTML = `<p class="px-3 text-[#e74c3c]">Your are saving  ${discountPrice} BDT</p>`;
+                } else if (Text === "couple20") {
+                    let discountPrice = (20 * totalSeatPrice) / 100;
+                    grandTotalprice = totalSeatPrice - discountPrice;
+                    document.getElementById("grandTotal").innerText = grandTotalprice;
+                    document.getElementById("without-coupon").innerHTML = `<p class="px-3 text-[#e74c3c]">Your are saving  ${discountPrice} BDT</p>`;
+                }
+
+            }
+            )
+
+        }
+
+
+    </script>
+
+    <script src="script/Alpha-clash.js"></script>
 
 </body>
 
